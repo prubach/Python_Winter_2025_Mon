@@ -1,6 +1,7 @@
 s1 = 'tom@university'
-s2 = 'tom@university.edu'
+s2 = 'tom@university.edu' # TRUE
 s3 = 'tom.university.edu'
+s4 = 'tom.john@university'
 
 def is_email_valid(email):
     result =

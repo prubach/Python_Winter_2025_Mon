@@ -7,6 +7,7 @@ my_folder = 'data'
 os.listdir(my_folder) # List files/folders inside a folder
 
 os.path.isdir(my_folder) # Check if it is a folder
-os.path.isfile(my_file)  # Check if it is a regular file
-os.path.getsize(my_file) # Get the size of a file
+#os.path.isfile(my_file)  # Check if it is a regular file
+#os.path.getsize(my_file) # Get the size of a file
 
+print(os.path.getsize(my_folder))

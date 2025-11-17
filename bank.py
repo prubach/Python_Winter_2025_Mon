@@ -23,7 +23,6 @@ class Account:
         return f'Account[{self.id}, {self.customer.lastname}, {self._balance}]'
 
 
-
 class Bank:
     def __init__(self, name):
         self.name = name
@@ -46,5 +45,7 @@ class Bank:
 
 bank = Bank('SGH Bank')
 c1 = bank.create_customer('John', 'Smith')
+a1 = bank.create_account(c1)
 
+print(bank)
 

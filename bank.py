@@ -19,6 +19,14 @@ class Account:
         self.id = Account.last_id
         self._balance = 0.0
 
+    def deposit(self, amount):
+        #TODO
+        pass
+
+    def charge(self, amount):
+        #TODO
+        pass
+
     def __repr__(self):
         return f'Account[{self.id}, {self.customer.lastname}, {self._balance}]'
 

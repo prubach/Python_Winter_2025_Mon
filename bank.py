@@ -20,12 +20,15 @@ class Account:
         self._balance = 0.0
 
     def deposit(self, amount):
-        #TODO
-        pass
+        if amount <= 0:
+            raise InvalidAmountException('Cannot deposit less or equal to 0')
+            #print('Cannot deposit less or equal to 0')
+        else:
+            self._balance = self._balance + amount
 
     def charge(self, amount):
         #TODO
-        pass
+        self._balance = self._balance - amount
 
     def __repr__(self):
         return f'Account[{self.id}, {self.customer.lastname}, {self._balance}]'
@@ -50,10 +53,35 @@ class Bank:
     def __repr__(self):
         return f'Bank[{self.customer_list}, {self.account_list}]'
 
+class BankException(Exception):
+    pass
+
+class InsufficientFundsException(BankException):
+    pass
+
+class InvalidAmountException(BankException):
+    pass
+
+
 
 bank = Bank('SGH Bank')
 c1 = bank.create_customer('John', 'Smith')
 a1 = bank.create_account(c1)
 
-print(bank)
+try:
+    a = 'gsgsg' + 344
+    a1.deposit(-500)
+    print(bank)
+    a1.charge(200)
+    print(bank)
+except InvalidAmountException as be:
+    print(be)
+    print('handled by InvAmount')
+except BankException as be:
+    print(be)
+except Exception as be:
+    print(be)
+    print('handled by exception')
+
+print('continuing execution')
 

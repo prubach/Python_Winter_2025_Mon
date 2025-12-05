@@ -113,4 +113,5 @@ if __name__ == "__main__":
         print("No data found — maybe the page structure changed.")
     else:
         print(df)
+        save_files(df)
         plot_volume_chart(df)

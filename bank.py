@@ -82,7 +82,7 @@ a1 = bank.create_account(c1)
 
 try:
     a = 'gsgsg' + 344
-    a1.deposit(-500)
+    a1.deposit(500)
     print(bank)
     a1.charge(200)
     print(bank)
@@ -91,9 +91,11 @@ except InvalidAmountException as be:
     print('handled by InvAmount')
 except BankException as be:
     print(be)
-except Exception as be:
-    print(be)
-    print('handled by exception')
+# except Exception as be:
+#     print(be)
+#     print('handled by exception')
+finally:
+    print('finally block')
 
 print('continuing execution')
 

@@ -5,7 +5,7 @@ ys = [i[1] for i in points_2D]
 print(xs)
 print(ys)
 
-plt.plot(xs, ys, '*')
+plt.plot(xs, ys, 'o')
 plt.xlabel('X axis')
 plt.ylabel('Y axis')
 plt.savefig('plot2D.png')
